@@ -1,7 +1,7 @@
 import React from 'react';
 import Film from './film';
 import styles from '../styles.module.css'
-
+/* невозможно импорт из nocs */
 const withFetch = () => {
      return class extends React.Component { 
         constructor(props) {
