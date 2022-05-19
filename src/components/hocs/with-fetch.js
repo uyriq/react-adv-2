@@ -5,10 +5,10 @@ import styles from '../../styles.module.css'
 const withFetch = () => {
      return class extends React.Component { 
         constructor(props) {
-             super(props); 
+            super(props); 
             // this.onButtonClick = this.onButtonClick.bind(this);
             // this.state = { isToggled: this.props.initialFetchState };
-            state = {
+            this.state = {
                 isLoading: false,
                 hasError: false,
                       data: []
