@@ -1,10 +1,10 @@
 import React from 'react';
-import WithFetch from './with-fetch';
+import withFetch from './with-fetch';
 
 class App extends React.Component {
   
   render() {
-    const WithFetchFilm = WithFetch(); 
+    const WithFetchFilm = withFetch(); 
     return (
       <WithFetchFilm />
     );

@@ -43,4 +43,4 @@ const withFetch = () => {
               }
             }
         }
-export default WithFetch 
+export default withFetch 
