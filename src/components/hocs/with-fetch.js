@@ -2,7 +2,7 @@ import React from 'react';
 import Film from '../film';
 import styles from '../../styles.module.css'
 
-export default const withFetch = (/* WrappedComponent */) => {
+const withFetch = () => {
      return class extends React.Component { 
         constructor(props) {
              super(props); 
@@ -43,3 +43,4 @@ export default const withFetch = (/* WrappedComponent */) => {
               }
             }
         }
+export default withFetch 
