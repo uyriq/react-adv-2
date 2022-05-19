@@ -1,8 +1,8 @@
 import React from 'react';
-import Film from '../film';
-import styles from '../../styles.module.css'
+import Film from './film';
+import styles from '../styles.module.css'
 
-export const withFetch = () => {
+const withFetch = () => {
      return class extends React.Component { 
         constructor(props) {
             super(props); 
@@ -43,4 +43,4 @@ export const withFetch = () => {
               }
             }
         }
-export default withFetch 
+export default WithFetch 
