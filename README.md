@@ -23,5 +23,37 @@
     const WithFetchFilm = withFetch(); 
 
 
+Урок 2.2
+
+Компонент withFetch содержит URL к API и компонент Film. Это не укладывается в концепцию НОС — отличные от Film компоненты отрисовать не получится.
+Чтобы это исправить, отредактируйте компонент withFetch так, чтобы рендер-метод возвращал переданный WrappedComponent. При этом URL должен браться из пропсов.
+Небольшая подсказка: воспользуйтесь каррированием внутри компонента withFetch. Простой пример каррирования выглядит так:
+
+function carried(props) {
+    return function carrying(callback) { 
+        return callback(props);
+    }
+}
+
+// С использованием стрелочных функций:
+const carried = props => callback => callback(props); 
+
+URL-адрес и компонент Film передайте в WithFetchFilm. Не забудьте перенести импорт компонента Film в App.
+
+Если возникли сложности с каррированием, то вот так выглядит передача URL и компонента Film в переменную WithFetchFilm:
+
+const WithFetchFilm = withFetch('https://api.nomoreparties.co/beatfilm-movies')(Film); 
+
+Компонент withFetch также изменится:
+
+import React from 'react';
+import styles from '../../styles.module.css'
+
+const withFetch = props => WrappedComponent => class extends React.Component {
+    // Здесь содержимое компонента withFetch
+} 
+
+Мы знаем, что это сложная задача в плане проверки кода тренажером на валидность. Если вы уверены, что ваш код правильный, но тренажер не может его принять, вы можете сравнить ваше решение с решением автора.
+
 # practicum-react-advanced-lesson-2
 Created with CodeSandbox
