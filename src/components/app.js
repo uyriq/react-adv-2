@@ -7,7 +7,8 @@ export default class App extends React.Component {
     isLoading: false,
     hasError: false,
           data: []
-
+  }
+  
   componentDidMount() {
     this.getFilms();
   }
