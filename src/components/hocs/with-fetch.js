@@ -2,7 +2,7 @@ import React from 'react';
 import Film from '../film';
 import styles from '../../styles.module.css'
 
-const withFetch = () => {
+export const withFetch = () => {
      return class extends React.Component { 
         constructor(props) {
             super(props); 
